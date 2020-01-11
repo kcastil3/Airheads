@@ -1,0 +1,15 @@
+#!/bin/bash
+sudo apt-get update
+sudo apt-get install gcc make build-essential python-dev git scons swig
+sudo nano /etc/modprobe.d/snd-blacklist.conf
+blacklist snd_bcm2835
+sudo nano /boot/config.txt
+
+
+git clone https://github.com/kcastil3/rpi_ws281x
+cd rpi_ws281x/
+sudo scons
+
+cd python
+sudo  python setup.py build
+sudo python setup.py install
