@@ -1,15 +1,10 @@
 #!/bin/bash
-sudo apt-get update
-sudo apt-get install gcc make build-essential python-dev git scons swig
-sudo nano /etc/modprobe.d/snd-blacklist.conf
-blacklist snd_bcm2835
-sudo nano /boot/config.txt
+# Test Script
 
+echo "Hello World" >> test_file.txt
 
-git clone https://github.com/kcastil3/rpi_ws281x
-cd rpi_ws281x/
-sudo scons
-
-cd python
-sudo  python setup.py build
+# Call python executable
+cd Airheads/rpi_ws281x/python
+sudo python setup.py build
 sudo python setup.py install
+sudo PYTHONPATH=".:build/lib.linux-armv71-2.7" python examples/strandtest.py
