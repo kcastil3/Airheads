@@ -1,8 +1,0 @@
-#!/bin/bash
-# Test Script
-
-# Call python executable
-cd Airheads/rpi_ws281x/python
-sudo python setup.py build
-sudo python setup.py install
-sudo PYTHONPATH=".:build/lib.linux-armv71-2.7" python examples/strandtest.py
