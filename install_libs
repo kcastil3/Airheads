@@ -1,8 +1,6 @@
 #!/bin/bash
 # Test Script
 
-echo "Hello World" >> test_file.txt
-
 # Call python executable
 cd Airheads/rpi_ws281x/python
 sudo python setup.py build
