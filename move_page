@@ -1,0 +1,7 @@
+#!/bin/bash
+# This script is used to move the contents of the webpage from the
+# git repo into the appropriate location: /var/www/html/FILE_NAME
+
+cp main.css /var/www/html
+cp index.php /var/www/html
+echo 'Files moved'
