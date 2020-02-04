@@ -2,6 +2,9 @@
 # This script is used to move the contents of the webpage from the
 # git repo into the appropriate location: /var/www/html/FILE_NAME
 
+cp update.php /var/www/html
+echo "update.php moved"
 cp main.css /var/www/html
+echo "Main.css moved"
 cp index.php /var/www/html
-echo 'Files moved'
+echo 'Index.php moved'

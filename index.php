@@ -46,15 +46,17 @@
             
                 <h1> Cloud Installation Control Panel </h1>
                 
-                <form action="php.script" method="post" id="form_general">                
+                <form action="update.php" method="post" id="form_general">                
                     
-                    <input type="radio" name="set_color" onclick="enable_colors_display()" class="radio_button"/>Set Color<br />
+		    <div id="radio_buttons">
+                       <input type="radio" name="set_color" onclick="enable_colors_display()"/>Set Color<br />
         
-                    <input type="radio" name="set_color" onclick="enable_countries_list()" class="radio_button"/>Set Location<br />   
-                              
+                       <input type="radio" name="set_color" onclick="enable_countries_list()"/>Set Location<br />   
+		    </div>
+       
                     <input type="color" id="colors_disp"/>
                     
-                    <div id=loc_form>
+                    <div id="loc_form">
                         
                         <select name="country" class="countries" id="countryId">
                             <option value="">Select Country</option>
@@ -76,6 +78,12 @@
                     <input type="submit" onclick = "apply_settings()" id="submit_button" name="Submit">
                         
                 </form> 
+		
+		<?php
+		   $myfile  = fopen("vars.txt", "r");
+		   echo fread($myfile, filesize("vars.txt"));
+		   fclose($myfile);
+		 ?>
                     
     </body>
 </html>

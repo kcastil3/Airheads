@@ -29,6 +29,11 @@ h1{
     margin-left: 5%;
 }
 
+#radio_buttons{
+   font-family: monospace;
+   color: antiquewhite;
+}
+
 #loc_form{
     display:none;
     padding-top: 10%;
