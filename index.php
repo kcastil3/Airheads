@@ -46,7 +46,7 @@
             
                 <h1> Cloud Installation Control Panel </h1>
                 
-                <div id="form">                
+                <form action="php.script" method="post" id="form_general">                
                     
                     <input type="radio" name="set_color" onclick="enable_colors_display()" class="radio_button"/>Set Color<br />
         
@@ -54,7 +54,7 @@
                               
                     <input type="color" id="colors_disp"/>
                     
-                    <form id=loc_form>
+                    <div id=loc_form>
                         
                         <select name="country" class="countries" id="countryId">
                             <option value="">Select Country</option>
@@ -71,11 +71,11 @@
                         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
                         
                         <script src="//geodata.solutions/includes/countrystatecity.js"></script>
+                    </div>
                         
-                    </form>
+                    <input type="submit" onclick = "apply_settings()" id="submit_button" name="Submit">
+                        
+                </form> 
                     
-                    <button onclick = "apply_settings()" id="submit_button"> Apply Settings </button>
-                    
-                </div>
     </body>
 </html>
