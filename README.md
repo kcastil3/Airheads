@@ -25,6 +25,16 @@ File Breakdown:
         
       - The <select='color'> tag is an HTML5 only feature, this would be difficult to implement by 
         ourselves. Fortunately HTML5 is now the norm, so it is safe to assume all end-users have access to it.
+        
+  update.php
+    
+    This file is executed when the submit button is pressed (from index.php) and all of the required fields in the form are filled.
+    It updates the value of the variables saved in the vars.txt files to match that submitted in the form. After this, the user is 
+    redirected back to the home page.
+    
+ vars.txt
+    
+    Rather than use a database, this lightweight method is a way to save variables on the server-side.
       
   main.css
   
