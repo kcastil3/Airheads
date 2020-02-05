@@ -18,6 +18,7 @@
                 colors = document.getElementById("colors_disp");
                 colors.style.display = "none";
 
+		document.getElementById("form_general").reset();
                 show_submit();
 
             }
@@ -36,6 +37,7 @@
 		state_form.required = false;
 		city_form.required = false;
 
+		document.getElementById("form_general").reset();
                 show_submit();
             }
             
@@ -66,7 +68,7 @@
 		    </div>
       			
 		    <div id="colors_disp">
-			<input type="color"/>
+			<input type="color" name="color_val" value="#ccffff"/>
 			<label> Click Button to Set Color</label>
 		    </div>
 
