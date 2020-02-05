@@ -35,6 +35,7 @@ File Breakdown:
  vars.txt
     
     Rather than use a database, this lightweight method is a way to save variables on the server-side.
+    * In order to use the PHP methods that access this txt file, the correct permissions must be configured on the server.
       
   main.css
   
