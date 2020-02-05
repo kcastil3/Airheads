@@ -7,8 +7,17 @@
             function enable_countries_list(){
                 countries = document.getElementById("loc_form");
                 countries.style.display = "block";
+
+		country_form = document.getElementById("countryId");
+		state_form = document.getElementById("stateId");
+		city_form = document.getElementById("cityId");
+		country_form.required = true;
+		state_form.required = true;
+		city_form.required = true;
+
                 colors = document.getElementById("colors_disp");
                 colors.style.display = "none";
+
                 show_submit();
 
             }
@@ -19,18 +28,20 @@
                 colors.style.display = "block";
                 countries = document.getElementById("loc_form");
                 countries.style.display = "none";
+
+		country_form = document.getElementById("countryId");
+		state_form = document.getElementById("stateId");
+		city_form = document.getElementById("cityId");
+		country_form.required = false;
+		state_form.required = false;
+		city_form.required = false;
+
                 show_submit();
             }
             
             // Show the submit button so that the user can finalize their color choice
             function show_submit(){
                 document.getElementById("submit_button").style.display="block";    
-            }
-            
-            // Called when submit button is clicked
-            // Should call a php script? TBD
-            function apply_settings(){
-            
             }
             
         </script>
@@ -53,20 +64,23 @@
         
                        <input type="radio" name="set_color" onclick="enable_countries_list()"/>Set Location<br />   
 		    </div>
-       
-                    <input type="color" id="colors_disp"/>
-                    
+      			
+		    <div id="colors_disp">
+			<input type="color"/>
+			<label> Click Button to Set Color</label>
+		    </div>
+
                     <div id="loc_form">
                         
-                        <select name="country" class="countries" id="countryId">
+                        <select name="country" class="countries" id="countryId" required>
                             <option value="">Select Country</option>
                         </select>
                         
-                        <select name="state" class="states" id="stateId">
+                        <select name="state" class="states" id="stateId" required>
                             <option value="">Select State</option>
                         </select>
                         
-                        <select name="city" class="cities" id="cityId">
+                        <select name="city" class="cities" id="cityId" required>
                             <option value="">Select City</option>
                         </select>
                         
@@ -75,7 +89,7 @@
                         <script src="//geodata.solutions/includes/countrystatecity.js"></script>
                     </div>
                         
-                    <input type="submit" onclick = "apply_settings()" id="submit_button" name="Submit">
+                    <input type="submit" id="submit_button" name="Submit">
                         
                 </form> 
 		
