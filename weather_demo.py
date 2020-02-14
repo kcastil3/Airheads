@@ -9,9 +9,11 @@ user_setting = file.readline().lower()
 file.close()
 print(user_setting)
 
-if "color" in user_setting:
+if "color" in user_setting: # Don't need to make a request to API if color was set directly
    print("Color setting is being used")
-   exit(0); # Don't need to make a request to API if color was set directly
+
+   output = open("/var/www/html/weather_data.txt","w") # Clear weather data file, it is irrelevant for this setting
+   exit(0);
 else: # Otherwise, need to contact API
    user_setting = user_setting.split(':')[1] # Return city + country name as single string
    locations = user_setting.split(',')
@@ -24,4 +26,8 @@ else: # Otherwise, need to contact API
 
    temp= weather_obj.get_temperature('fahrenheit')
    print(temp['temp'])
+
+   output = open("/var/www/html/weather_data.txt","w") # Store weather data in a separate location
+   output.write("The temperature is: " + str(temp['temp']))
+   output.close()
    exit(0)

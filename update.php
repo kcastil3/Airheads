@@ -11,11 +11,10 @@
      $txt = ", ";
      echo fwrite($myfile, $txt);
      echo fwrite($myfile, $_POST['country']);
+     fclose($myfile);
   } else{
      echo fwrite($myfile, 'the color: '. $_POST['color_val']);
+     fclose($myfile);
   }
-
-  $fclose($myfile);
-
   exit;
 ?>

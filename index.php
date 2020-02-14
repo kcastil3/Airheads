@@ -94,11 +94,17 @@
                     <input type="submit" id="submit_button" name="Submit">
                         
                 </form> 
-		
+		<p> <br> </p>
 		<?php
 		   $myfile  = fopen("vars.txt", "r");
 		   echo fread($myfile, filesize("vars.txt"));
 		   fclose($myfile);
+                ?>
+	        <p> <br> </p>
+		<?php
+                   $datafile = fopen("weather_data.txt", "r");
+                   echo fread($datafile, filesize("weather_data.txt"));
+                   fclose($datafile);
 		 ?>
                     
     </body>
