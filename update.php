@@ -7,12 +7,12 @@
 
   // Check whether color or location was set and update txt file accordingly
   if(! empty($_POST['city'])){
-     echo fwrite($myfile,'the location '.  $_POST['city']);
+     echo fwrite($myfile,'the location: '.  $_POST['city']);
      $txt = ", ";
      echo fwrite($myfile, $txt);
      echo fwrite($myfile, $_POST['country']);
   } else{
-     echo fwrite($myfile, 'the color '. $_POST['color_val']);
+     echo fwrite($myfile, 'the color: '. $_POST['color_val']);
   }
 
   $fclose($myfile);
