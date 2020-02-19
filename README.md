@@ -36,6 +36,10 @@ File Breakdown:
     
     Rather than use a database, this lightweight method is a way to save variables on the server-side.
     * In order to use the PHP methods that access this txt file, the correct permissions must be configured on the server.
+    
+ weather_data.txt
+    For the same reasons outlined above, this txt file contains the weather data. We use two separate txt files in order to simplify any
+    neccessary parsing.
       
   main.css
   
