@@ -97,13 +97,14 @@
 		<p> <br> </p>
 		<?php
 		   $myfile  = fopen("vars.txt", "r");
-		   echo fread($myfile, filesize("vars.txt"));
+		   $vars = fread($myfile, filesize("vars.txt"));
+		   echo $vars;
+		   echo nl2br(" \n \r\n");
 		   fclose($myfile);
-                ?>
-	        <p> <br> </p>
-		<?php
+
                    $datafile = fopen("weather_data.txt", "r");
-                   echo fread($datafile, filesize("weather_data.txt"));
+                   $weather =  fread($datafile, filesize("weather_data.txt"));
+		   echo $weather;
                    fclose($datafile);
 		 ?>
                     
