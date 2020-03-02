@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
+<! A Bridge LLC Product
+Credit for Background Image goes to Tom Barret:
+https://unsplash.com/@wistomsin -->
 <html>
     <head>
         <script>
@@ -19,6 +22,7 @@
                 colors.style.display = "none";
 
 		document.getElementById("form_general").reset();
+        document.getElementById("loc_radio").checked = true;
                 show_submit();
 
             }
@@ -38,6 +42,7 @@
 		city_form.required = false;
 
 		document.getElementById("form_general").reset();
+        document.getElementById("color_radio").checked = true;
                 show_submit();
             }
             
@@ -50,8 +55,9 @@
         
         <meta charset="utf-8" />
         <meta name="description" content="User interface for remote cloud sculpture control." />
+        <link rel="shortcut icon" href="bridge_logo.jpg">
         <link rel="stylesheet" href="main.css" />
-        <title> Cloud Installation Control Panel </title>
+        <title> Weather-Responsive Cloud Installation Control Panel </title>
 
     </head>
     
@@ -62,33 +68,29 @@
                 <form action="update.php" method="post" id="form_general">                
                     
 		    <div id="radio_buttons">
-                       <input type="radio" name="set_color" onclick="enable_colors_display()"/>Set Color<br />
+                       <input type="radio" id="color_radio" name="set_color" onclick="enable_colors_display()"/>Set Color<br />
         
-                       <input type="radio" name="set_color" onclick="enable_countries_list()"/>Set Location<br />   
+                       <input type="radio" id="loc_radio" name="set_color" onclick="enable_countries_list()"/>Set Location<br />   
 		    </div>
       			
 		    <div id="colors_disp">
 			<input type="color" name="color_val" value="#ccffff"/>
-			<label> Click Button to Set Color</label>
+			<label> Click to set color</label>
 		    </div>
 
                     <div id="loc_form">
-                        
-                        <select name="country" class="countries" id="countryId" required>
-                            <option value="">Select Country</option>
+                        <select name="country" class="countries order-alpha limit-pop-1000000 presel-US" id="countryId">
+                        <option value="">Select Country</option>
                         </select>
-                        
-                        <select name="state" class="states" id="stateId" required>
-                            <option value="">Select State</option>
+                        <select name="state" class="states order-alpha" id="stateId">
+                        <option value="">Select State</option>
                         </select>
-                        
-                        <select name="city" class="cities" id="cityId" required>
-                            <option value="">Select City</option>
+                        <select name="city" class="cities order-alpha limit-pop-110000" id="cityId">
+                        <option value="">Select City</option>
                         </select>
-                        
-                        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-                        
+                        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
                         <script src="//geodata.solutions/includes/countrystatecity.js"></script>
+                        
                     </div>
                         
                     <input type="submit" id="submit_button" name="Submit">
