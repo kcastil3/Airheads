@@ -100,13 +100,13 @@ https://unsplash.com/@wistomsin -->
 		<?php
 		   $myfile  = fopen("vars.txt", "r");
 		   $vars = fread($myfile, filesize("vars.txt"));
-		   echo $vars;
+		   echo "<strong><div style =\"color:blue;\"> $vars</div></strong>";
 		   echo nl2br(" \n \r\n");
 		   fclose($myfile);
 
                    $datafile = fopen("weather_data.txt", "r");
-                   $weather =  fread($datafile, filesize("weather_data.txt"));
-		   echo $weather;
+                   $weather =  fgets($datafile, filesize("weather_data.txt"));
+		   echo "<strong> <div style =\"color:blue;\"> $weather</div></strong> ";
                    fclose($datafile);
 		 ?>
                     

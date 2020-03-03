@@ -14,7 +14,7 @@
 
      //Need to wait for separate python script to execute
      $weatherfile = fopen("weather_data.txt","w");
-     echo fwrite($weatherfile, "Fetching weather data... refresh momentarily");
+     echo fwrite($weatherfile, "Fetching weather data... refresh momentarily.");
      fclose($weatherfile);
   } else{
      echo fwrite($myfile, 'the color: '. $_POST['color_val']);

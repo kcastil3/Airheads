@@ -24,10 +24,16 @@ else: # Otherwise, need to contact API
    city_obj = owm.weather_at_place(city_name + ", " + country_name)
    weather_obj = city_obj.get_weather()
 
-   temp= weather_obj.get_temperature('fahrenheit')
-   print(temp['temp'])
+   # Get three required parameters
+   temp = weather_obj.get_temperature('fahrenheit')
+   sunset_time = weather_obj.get_sunset_time('iso')
+   code = weather_obj.get_weather_code()
 
+   # Move everything to txt file
    output = open("/var/www/html/weather_data.txt","w") # Store weather data in a separate location
-   output.write("The temperature is: " + str(temp['temp']))
+   output.write("The temperature is: " + str(temp['temp']) + "\n")
+   output.write("Code:" + str(code) + "\n")
+   output.write("Sunset:" + sunset_time + "\n");
+   
    output.close()
    exit(0)
