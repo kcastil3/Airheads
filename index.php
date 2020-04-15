@@ -51,6 +51,11 @@ https://unsplash.com/@wistomsin -->
                 document.getElementById("submit_button").style.display="block";    
             }
             
+            // Get the color choice in manual entry mode
+            function get_color(choice){
+                
+            }
+            
         </script>
         
         <meta charset="utf-8" />
@@ -74,8 +79,15 @@ https://unsplash.com/@wistomsin -->
 		    </div>
       			
 		    <div id="colors_disp">
-			<input type="color" name="color_val" value="#ccffff"/>
-			<label> Click to set color</label>
+                <input type="radio" value="White" class= "buttons" name="buttons"> White <br />
+                <input type="radio" value="Eggshell" class= "buttons" name="buttons"> Eggshell <br />
+                <input type="radio" value="Orange" class= "buttons" name="buttons"> Orange <br />
+                <input type="radio" value="Purple" class="buttons" name="buttons"> Purple <br />
+                <input type="radio" value="Red" class="buttons" name="buttons"> Red <br />
+                <input type="radio" value="Green" class="buttons" name="buttons"> Green <br />
+                <input type="radio" value="Blue" class="buttons" name="buttons"> Blue <br />
+                <input type="radio" value="Off" class="buttons" name="buttons"> Off
+                <br />
 		    </div>
 
                     <div id="loc_form">
