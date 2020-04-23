@@ -61,7 +61,9 @@ File Breakdown:
   
   weather_demo.py (may be a php script in the future)
   
-    This file will needed lots of updating, it will be the program that responds to changes in the server (i.e. a change in the 
+    This responds to changes in the server (i.e. a change in the 
     weather-setting variable) and fetches the weather-data corresponding to that location. It will then make the neccessary
     changes to the webpage so that the user can clearly see the location/color setting whenever they log on.
     
+ pipeline
+    This file will be called via cronjob and is used to pull most recent changes from the github on startup.
