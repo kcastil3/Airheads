@@ -1,0 +1,4 @@
+#!/bin/bash
+# This script is used to automatically update the RPI on startup
+
+git pull REPO NAME HERE
