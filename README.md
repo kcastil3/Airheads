@@ -65,5 +65,6 @@ File Breakdown:
     weather-setting variable) and fetches the weather-data corresponding to that location. It will then make the neccessary
     changes to the webpage so that the user can clearly see the location/color setting whenever they log on.
     
- pipeline
+  pipeline
+  
     This file will be called via cronjob and is used to pull most recent changes from the github on startup.
